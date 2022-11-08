@@ -30,7 +30,7 @@ const ItemPreview = (props) => {
   };
   let itemImg = item.image;
   if (item.image === "") {
-    itemImg = "https://socialistmodernism.com/wp-content/uploads/2017/07/placeholder-image-768x576.png";
+    itemImg = "/placeholder.png";
   }
   return (
     
