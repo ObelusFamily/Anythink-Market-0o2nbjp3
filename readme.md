@@ -23,4 +23,4 @@ For the BackEnd: http://localhost:3000/api/ping
 For the FrontEnd: http://localhost:3001/register
 
 You can then set up a new user on the FrontEnd, to make sure the db is running and connected properly as well.
-
+Good luck!
