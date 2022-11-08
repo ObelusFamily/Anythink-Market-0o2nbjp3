@@ -28,6 +28,10 @@ const ItemPreview = (props) => {
       props.favorite(item.slug);
     }
   };
+  let itemImg = item.image;
+  if (item.image === "") {
+    itemImg = "https://socialistmodernism.com/wp-content/uploads/2017/07/placeholder-image-768x576.png";
+  }
 
   return (
     <div
@@ -36,7 +40,7 @@ const ItemPreview = (props) => {
     >
       <img
         alt="item"
-        src={item.image}
+        src={itemImg}
         className="card-img-top item-img"
         style={{ borderRadius: "20px" }}
       />

@@ -37,6 +37,9 @@ class Item extends React.Component {
     if (!this.props.item) {
       return null;
     }
+    if (this.props.item.image === "") {
+      this.props.item.image = "https://socialistmodernism.com/wp-content/uploads/2017/07/placeholder-image-768x576.png";
+    }
 
     const markup = {
       __html: marked(this.props.item.description, { sanitize: true }),
