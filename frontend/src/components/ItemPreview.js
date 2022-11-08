@@ -28,9 +28,9 @@ const ItemPreview = (props) => {
       props.favorite(item.slug);
     }
   };
-  let itemImg = item.image;
+  
   if (item.image === "") {
-    itemImg = "/placeholder.png";
+    item.image = "/placeholder.png";
   }
   return (
     
