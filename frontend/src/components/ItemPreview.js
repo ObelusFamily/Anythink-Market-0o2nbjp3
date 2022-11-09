@@ -29,7 +29,7 @@ const ItemPreview = (props) => {
     }
   };
   if (item.image === "") {
-    props.image = placeholder;
+    props.item.image = placeholder;
   }
   return (
     
