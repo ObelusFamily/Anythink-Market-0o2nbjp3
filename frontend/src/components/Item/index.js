@@ -18,7 +18,6 @@ const mapDispatchToProps = (dispatch) => ({
   onLoad: (payload) => dispatch({ type: ITEM_PAGE_LOADED, payload }),
   onUnload: () => dispatch({ type: ITEM_PAGE_UNLOADED }),
 });
-let imgSrc = "";
 
 class Item extends React.Component {
   componentWillMount() {
@@ -36,9 +35,7 @@ class Item extends React.Component {
 
   render() {
     if (this.props.item.image === "") {
-      imgSrc  = "/placeholder.png";
-    } else{
-      imgSrc = this.props.item.image;
+      this.props.item.image  = "/placeholder.png";
     }
     if (!this.props.item) {
       return null;
@@ -55,7 +52,7 @@ class Item extends React.Component {
           <div className="row bg-white p-4">
             <div className="col-6">
               <img
-                src={imgSrc}
+                src={this.props.item.image}
                 alt={this.props.item.title}
                 className="item-img"
                 style={{ height: "500px", width: "100%", borderRadius: "6px" }}
