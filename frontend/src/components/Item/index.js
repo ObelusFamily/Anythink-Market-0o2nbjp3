@@ -8,7 +8,7 @@ import {
   ITEM_PAGE_LOADED,
   ITEM_PAGE_UNLOADED,
 } from "../../constants/actionTypes";
-
+const placeholder = "/placeholder.png";
 const mapStateToProps = (state) => ({
   ...state.item,
   currentUser: state.common.currentUser,
@@ -35,7 +35,7 @@ class Item extends React.Component {
 
   render() {
     if (this.props.item.image === "") {
-      this.props.item.image  = "/placeholder.png";
+      this.props.item.image  = placeholder;
     }
     if (!this.props.item) {
       return null;
